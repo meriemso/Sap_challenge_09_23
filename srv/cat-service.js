@@ -6,5 +6,5 @@ module.exports = class DevChallengeService extends cds.ApplicationService {
     } 
     
     // TODO: Implement the bound action: assignQuestionsToTest  
-    assignQuestionsToTest(){}https://github.com/meriemso/Sap_challenge_09_23.git
+    assignQuestionsToTest(){}
 } 
