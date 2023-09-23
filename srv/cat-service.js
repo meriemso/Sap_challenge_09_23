@@ -3,12 +3,17 @@ const cds = require('@sap/cds')
 module.exports = class DevChallengeService extends cds.ApplicationService { 
    
     init() { 
+        this.after('READ', 'Test', aTests => {
+            aTests.forEach( test=> {
+                test.questionNum = test.questions;
+            })
+        });
         return super.init() 
     } 
     
     // TODO: Implement the bound action: assignQuestionsToTest  
     async assignQuestionsToTest(Tests,id,questionsCount ){
-        // db = await cds.connect.to('db');
+      
         if(questionsCount<1){
             return 'a test must have at least 1 question';
         }
