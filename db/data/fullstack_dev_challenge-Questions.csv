@@ -1,6 +1,9 @@
-text
-question 1
-question 2
-question 3
-question 4
-question 5
+ID,text
+15c25e01,"What is SAP?"
+15c25e02,"Why does the SAP used for?"
+15c25e03,"What are Metadata?"
+25c25e04,"What are Master data?"
+15c25e05,"What are Transaction data?"
+25c25e06,"What are variables in SAP?"
+15c25e07,"What are pooled tables in SAP?"
+25c25e08,"Explain about SAP launchpad."

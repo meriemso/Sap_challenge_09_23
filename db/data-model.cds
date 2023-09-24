@@ -7,9 +7,10 @@ entity Tests : managed{
   title: String ;
   description: String ;
   questions : Association to many Questions on questions.test = $self ;
+  test: String ;
 } 
 
-entity Questions { 
+entity Questions: managed { 
   key ID          : UUID @(Core.Computed: true);
   text:String;
   answer: Composition of one Answers;

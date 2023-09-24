@@ -5,12 +5,12 @@ annotate service.Tests with @(
         TypeName      : '{@i18n>testDetails}',
         TypeNamePlural: '{@i18n>testDetails}',
         Title         : {
-            Value: 'Developer Challenge 3',
+            Value: '{@i18n>headerTitle}',
             ![@UI.Emphasized],
         },
         Description   : {
             $Type: 'UI.DataField',
-            Value: description
+            Value: '{@i18n>headerdescription}'
         }
     },
     UI.Facets                 : [
@@ -34,35 +34,40 @@ annotate service.Tests with @(
         Action: 'service.assignQuestionsToTest',
 
     }],
-    UI.LineItem               : [
-        {
-            $Type: 'UI.DataField',
-            Label: '{@i18n>title}',
-            Value: title,
-        },
-        {
-            $Type: 'UI.DataField',
-            Label: '{@i18n>descr}',
-            Value: description,
-        },
-      
-        {
-            $Type: 'UI.DataField',
-            Label: '{@i18n>createdBy}',
-            Value: createdBy,
-        },
-          {
-            $Type: 'UI.DataField',
-            Label: '{@i18n>createdAt}',
-            Value: createdAt,
+    UI.LineItem               : {
+        $value   : [
+            {
+                $Type: 'UI.DataField',
+                Label: '{@i18n>title}',
+                Value: title,
+            },
+            {
+                $Type: 'UI.DataField',
+                Label: '{@i18n>descr}',
+                Value: description,
+            },
+
+            {
+                $Type: 'UI.DataField',
+                Label: '{@i18n>createdBy}',
+                Value: createdBy,
             
-        },
-        {
-            $Type: 'UI.DataField',
-            Label: '{@i18n>questionsNumber}',
-            Value: '4',
-        }
-    ],
+            },
+            {
+                $Type: 'UI.DataField',
+                Label: '{@i18n>createdAt}',
+                Value: createdAt,
+
+            },
+            {
+                $Type: 'UI.DataField',
+                Label: '{@i18n>questionsNumber}',
+                Value: numberOfQuestions,
+                Criticality:critical
+            }
+        ],
+         ![@UI.Criticality]: critical
+    },
     UI.FieldGroup #TestDetails: {
         $Type       : 'UI.FieldGroupType',
         @title      : '{@i18n>testDetails}',
