@@ -28,10 +28,10 @@ module.exports = class DevChallengeService extends cds.ApplicationService {
         const questions = await cds.run(SELECT.from(`DevChallengeService.Questions`).where({ test: null }).limit(questionsCount));
         let msg = '';
         if (!questions || questions.length === 0) {
-            return 'No questions available for assignment'
+            return 'No questions available for assignment. '
         } else if (questions.length < questionsCount) {
 
-            msg = 'There are only ' + questions.length + 'question(s) available.';
+            msg = 'There are only ' + questions.length + 'question(s) available. ';
         }
         questions.forEach(question => {
             const test = cds.run(
@@ -40,7 +40,7 @@ module.exports = class DevChallengeService extends cds.ApplicationService {
             );
         });
 
-        msg += `${questions.length} questioons successfully added to the test`;
+        msg += `${questions.length} question(s) successfully added to the test`;
         return msg;
     }
 

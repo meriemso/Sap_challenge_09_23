@@ -28,12 +28,7 @@ annotate service.Tests with @(
 
         }
     ],
-    UI.Identification         : [{
-        $Type : 'UI.DataFieldForAction',
-        Label : '{@i18n>addQuestions}',
-        Action: 'service.assignQuestionsToTest',
-
-    }],
+   
     UI.LineItem               : {
         $value   : [
             {

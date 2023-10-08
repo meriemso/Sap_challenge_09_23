@@ -1,23 +1,23 @@
 {
-  "name": "fullstackDevChallenge",
-  "version": "1.0.0",
-  "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
-  "license": "UNLICENSED",
-  "private": true,
-  "dependencies": {
-    "@sap/cds": "^7",
-    "express": "^4"
-  },
-  "devDependencies": {
-    "@cap-js/sqlite": "^1",
-    "@sap/ux-specification": "^1.108.14"
-  },
-  "scripts": {
-    "start": "cds-serve",
-    "watch-fullstack-dev_challenge": "cds watch --open fullstack-dev_challenge/webapp/index.html?sap-ui-xx-viewCache=false"
-  },
-  "sapux": [
-    "app/fullstack-dev_challenge"
-  ]
+    "name": "fullstackDevChallenge",
+    "version": "1.0.0",
+    "description": "A simple CAP project.",
+    "repository": "<Add your repository here>",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "@sap/cds": "^7",
+        "express": "^4"
+    },
+    "devDependencies": {
+        "@cap-js/sqlite": "^1",
+        "@sap/ux-specification": "UI5-1.118"
+    },
+    "scripts": {
+        "start": "cds-serve",
+        "watch-fullstack-dev_challenge": "cds watch --open fullstack-dev_challenge/webapp/index.html?sap-ui-xx-viewCache=false"
+    },
+    "sapux": [
+        "app/fullstack-dev_challenge"
+    ]
 }
