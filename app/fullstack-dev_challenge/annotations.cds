@@ -28,9 +28,9 @@ annotate service.Tests with @(
 
         }
     ],
-   
+
     UI.LineItem               : {
-        $value   : [
+        $value            : [
             {
                 $Type: 'UI.DataField',
                 Label: '{@i18n>title}',
@@ -46,7 +46,7 @@ annotate service.Tests with @(
                 $Type: 'UI.DataField',
                 Label: '{@i18n>createdBy}',
                 Value: createdBy,
-            
+
             },
             {
                 $Type: 'UI.DataField',
@@ -55,13 +55,13 @@ annotate service.Tests with @(
 
             },
             {
-                $Type: 'UI.DataField',
-                Label: '{@i18n>questionsNumber}',
-                Value: numberOfQuestions,
-                Criticality:critical
+                $Type      : 'UI.DataField',
+                Label      : '{@i18n>questionsNumber}',
+                Value      : numberOfQuestions,
+                Criticality: critical
             }
         ],
-         ![@UI.Criticality]: critical
+        ![@UI.Criticality]: critical
     },
     UI.FieldGroup #TestDetails: {
         $Type       : 'UI.FieldGroupType',
@@ -93,19 +93,24 @@ annotate service.Tests with @(
         ],
     },
 
-
 );
 
-annotate service.Questions with @(UI.LineItem: [
-    {
-        $Type: 'UI.DataField',
-        Value: text,
-        Label: '{@i18n>questionText}'
-    },
-    {
-        $Type: 'UI.DataField',
-        Value: answer.text,
-        Label: '{@i18n>answerText}'
+annotate service.Questions with @(
+    UI.LineItem       : {
+         $value            : [
+        {
+            $Type: 'UI.DataField',
+            Value: text,
+            Label: '{@i18n>questionText}'
+        },
+        {
+            $Type: 'UI.DataField',
+            Value: answer.text,
+            Label: '{@i18n>answerText}'
+        },
+        
+    ],
+    ![@UI.Criticality]: critical
     }
-
-]);
+    
+);

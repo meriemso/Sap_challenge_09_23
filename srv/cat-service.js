@@ -16,6 +16,14 @@ module.exports = class DevChallengeService extends cds.ApplicationService {
                 test.critical = ( test.numberOfQuestions > 0 ? 3 : 1 );
             })
         });
+        this.after('READ', 'Questions', aQuestionss => {
+            aQuestionss.forEach(async question => {
+            //    const  answer = await cds.run(
+            //     //    SELECT.from(`DevChallengeService.Answer`).where({ up__ID: question.ID })
+            //    )
+            question.critical = ( question.answer  ? 3 : 1 );
+           })
+       });
         return super.init()
     }
 

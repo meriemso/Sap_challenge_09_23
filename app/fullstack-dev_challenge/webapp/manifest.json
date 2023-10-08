@@ -147,6 +147,18 @@
                                             "text": "{i18n>addQuestions}"
                                         }
                                     }
+                                },
+                                "footer": {
+                                    "actions":{
+                                        "messagesDisplay": {
+                                            "press": "fullstackdevchallenge.ext.controller.TestsObjectPageExt.onMessagePopoverPress",
+                                            "visible": true,
+                                            "enabled": true,
+                                            "requiresSelection": false,
+                                            "text":"Messages",
+                                            "IconUrl ":"sap-icon://error"
+                                        }
+                                    }
                                 }
                             }
                         }

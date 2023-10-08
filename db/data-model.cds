@@ -15,6 +15,7 @@ entity Questions: managed {
   text:String;
   answer: Composition of one Answers;
   test:Association to Tests;
+  critical : Integer ;
 } 
 
 aspect Answers { 
